@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--by:stevss-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css')}}">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/102/102665.png">
+
+    <title>Sitio Web de Ventas - MARY'S</title>
+
+    <style>
+        h5 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #form1 {
+            font-size: 20px;
+            text-align: center;
+            border-color: blue;
+        }
+
+        #dropdownMenuButton1 {
+            background-color: darkgreen;
+        }
+
+        #label1 {
+            display: block;
+            position: absolute;
+            width: auto;
+            top: 125px;
+            right: 420px;
+            padding: 5px 5px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-style: unset;
+        }
+
+        h4 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: -1px -1px 1px #aaa,
+                0px 4px 1px rgba(0, 0, 0, 0.5),
+                4px 4px 5px rgba(0, 0, 0, 0.7),
+                0px 0px 7px rgba(0, 0, 0, 0.4);
+            font-size: 50px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="contenedor-logo">
+            <a href="/">
+                <img src="../static/images/logo.png" height="150px" width="400px">
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color:white;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Navegación en las diferentes subpages-->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 " style="font-size: 20px;">
+                    <!--Pagina de Inicio-->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <!--Lista deplegable ropa-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Ropa</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item text-dark" href="#">Camisas</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-dark" href="#">Pantalones</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-dark" href="#">Zapatos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Lista desplegable tecnologia-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Tecnologia</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item text-dark" href="#">Telefonos</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-dark" href="#">Computadoras</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Seccion Nosotros-->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#sobrenosotros">Nosotros</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav><br>
+    <!--NO EDITAR-->
+
+    <!--EDITAR DE AQUI PARA ABAJO-->
+    <!--CAMISAS-->
+
+    
+    
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+
+                <!--Conjunto de cards-->
+                <div class="col-10">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-normal mb-0 text-black">CAMISAS</h4>
+                    </div>
+                    <!--1º cards-->
+                    <div class="card rounded-3 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-md-4 col-lg-3 col-xl-3">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://m.media-amazon.com/images/I/81kxZ-LaebL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/71id+wwTw-L._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/71eZ4UdXRdL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                    <p class="lead fw-normal mb-2">Alex Vando Camisas de vestir para hombre Camisa de
+                                        manga larga de ajuste regular para hombre</p>
+                                    <div class="dropdown mb-4">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Tallas
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">M</a></li>
+                                            <li><a class="dropdown-item" href="#">S</a></li>
+                                            <li><a class="dropdown-item" href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Color:</h2>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Azul Marino">Azul Marino</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Negro">Negro</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Azul">Azul</label>
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                    <label class="etiqueta" for="nombre" id="label1">Cantidad:</label>
+                                    <input id="form1" min="0" name="quantity" value="0" type="number"
+                                        class="form-control form-control-sm" />
+
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                    <h5 class="mb-0">$39.00</h5>
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 col-xl-2">
+                                    <button type="button" class="btn btn-outline-warning btn-lg ms-3"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="100px" height="100px"
+                                            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                        </svg></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--2º cards-->
+                    <div class="card rounded-3 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-md-4 col-lg-3 col-xl-3">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://m.media-amazon.com/images/I/61lpeV-eitL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/912Zp2NTHVL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/71SNpLY4CcL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                    <p class="lead fw-normal mb-2">Wrangler Authentics - Camisa de forro polar de manga larga para hombre</p>
+                                    <div class="dropdown mb-4">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Tallas
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">M</a></li>
+                                            <li><a class="dropdown-item" href="#">S</a></li>
+                                            <li><a class="dropdown-item" href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Color:</h2>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Birch Buffalo">Birch Buffalo</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Tela escocesa Blue Buffalo">Tela escocesa Blue Buffalo</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Tela escocesa Red Buffalo">Tela escocesa Red Buffalo</label>
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                    <label class="etiqueta" for="nombre" id="label1">Cantidad:</label>
+                                    <input id="form1" min="0" name="quantity" value="0" type="number"
+                                        class="form-control form-control-sm" />
+
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                    <h5 class="mb-0">$29.00</h5>
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 col-xl-2">
+                                    <button type="button" class="btn btn-outline-warning btn-lg ms-3"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="100px" height="100px"
+                                            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                        </svg></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--3º cards-->
+                    <div class="card rounded-3 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-md-4 col-lg-3 col-xl-3">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://m.media-amazon.com/images/I/71id7B2ZhCS._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/61NS2YO25VS._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/71W+Os9pazS._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                    <p class="lead fw-normal mb-2">Blusa de satén para mujer, camisa de seda satinada de manga larga a la moda, camisa informal para trabajo y oficina</p>
+                                    <div class="dropdown mb-4">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Tallas
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">M</a></li>
+                                            <li><a class="dropdown-item" href="#">S</a></li>
+                                            <li><a class="dropdown-item" href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Color:</h2>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Champán">Champán</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Gris">Gris</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Blanco">Blanco</label>
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                    <label class="etiqueta" for="nombre" id="label1">Cantidad:</label>
+                                    <input id="form1" min="0" name="quantity" value="0" type="number"
+                                        class="form-control form-control-sm" />
+
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                    <h5 class="mb-0">$19.00</h5>
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 col-xl-2">
+                                    <button type="button" class="btn btn-outline-warning btn-lg ms-3"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="100px" height="100px"
+                                            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                        </svg></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                       <!--4º cards-->
+                    <div class="card rounded-3 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-md-4 col-lg-3 col-xl-3">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://m.media-amazon.com/images/I/91OcPod6D7L._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/51rx9lsQSFS._AC_UL1000_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://m.media-amazon.com/images/I/61H1RlfCnUL._AC_UL1500_.jpg"
+                                                    class="d-block w-100" alt="..." height="300px">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                    <p class="lead fw-normal mb-2">POLO RALPH LAUREN Camisa de botones de manga larga Oxford de ajuste clásico para mujer</p>
+                                    <div class="dropdown mb-4">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Tallas
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">M</a></li>
+                                            <li><a class="dropdown-item" href="#">S</a></li>
+                                            <li><a class="dropdown-item" href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2>Color:</h2>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Rosa">Rosa</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Azul" required>Azul</label>
+                                     <label class="radio-inline">
+                                        <input type="radio" name="movimiento" value="Blanco" checked>Blanco</label>
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                    <label class="etiqueta" for="nombre" id="label1">Cantidad:</label>
+                                    <input id="form1" min="0" name="quantity" value="0" type="number"
+                                        class="form-control form-control-sm" />
+
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                    <h5 class="mb-0">$35.00</h5>
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 col-xl-2">
+                                    <button type="button" class="btn btn-outline-warning btn-lg ms-3"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="100px" height="100px"
+                                            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                        </svg></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--EDITAR DE AQUI PARA ARRIBA-->
+
+    <!--NO EDITAR-->
+    <!-- FOOTER -->
+    <footer class="text-center text-lg-start foter text-muted">
+
+        <!-- Links donde tenemos otros enlaces de la pagina-->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Mary's Shop Online
+                        </h6>
+                        <p>
+                            Más momentos felices, mas… Mary's Shop Online, donde todos somos Fashion, por que
+                            tú y tu familia se lo merecen.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Categorias
+                        </h6>
+                        <p>
+                            <a href="#" class="text-reset">Inicio</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Ropa</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Tecnologia</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Nosotros</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            links
+                        </h6>
+                        <p>
+                            <a href="#" class="text-reset">Catálogo</a>
+                        </p>
+                    </div>
+                    <!-- Grid column  se divide en columnas -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contactanos
+                        </h6>
+                        <!-- Aqui va el nombre de la direccion  -->
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-map" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+                            </svg> Santo Domingo de los Tsachilas, Ecuador.</p>
+                        <p>
+                            <!-- aqui va el gmail de nuestro restaurante  -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>
+                            grupo6atw@espe.edu.ec
+                        </p>
+                        <!-- aqui va nuestro numero celular, esta la ruta del celular esta valida envio correcto -->
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                <path fill-rule="evenodd"
+                                    d="M11.146 1.646a.5.5 0 0 1 .708 0L13 2.793l1.146-1.147a.5.5 0 0 1 .708.708L13.707 3.5l1.147 1.146a.5.5 0 0 1-.708.708L13 4.207l-1.146 1.147a.5.5 0 0 1-.708-.708L12.293 3.5l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+                            </svg> (593) 999 999 999</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer bg-dark">
+            <div class="contenedor-footer text-white">
+                <small>&copy; 2022 <b>Universidad de las Fuerzas Armadas ESPE</b>
+            </div>
+        </footer>
+</body>
+
+</html>
